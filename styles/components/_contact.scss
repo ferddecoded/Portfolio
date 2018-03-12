@@ -1,0 +1,113 @@
+.contact {
+   // background:lightgray;
+   padding:0 0 50px;
+
+   h4 {
+      font-family: "montserrat";
+      color: black;
+      font-weight: 700;
+   }
+
+   .contactHeaderHolder h4 {
+      color: lightgray;
+   }
+}
+
+.contact .wrapper {
+   background: white;
+   border-radius: 5px;
+   padding: 20px;
+   box-shadow: 3px 1px 3px grey;
+   border: 1px solid lightgray;
+}
+
+
+.contact .wrapper {
+   .contactHeader {
+      justify-content: center;
+      @extend .flex;
+
+      .contactHeaderHolder {
+         text-align: center;
+      }
+   }
+   .contactForm {
+      @extend .flex;
+
+      .contactSection.left {
+         width: 33.33%;
+         text-align: center;
+
+         .logo {
+            width: 100%;
+            text-align: center;
+
+            img {
+               width: 30%;
+            }
+         }
+      }
+
+      .contactSection.right {
+         width: 66.66%;
+      }
+   }
+   
+}
+
+.formHolder {
+   width: 100%;
+   display: flex;
+   margin-bottom: 25px;
+
+   .name,
+   .email,
+   .textarea {
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      font-size: 1.6rem;
+   }
+
+
+   .name,
+   .email {
+      width: calc(50% - (10px * 1) / 2);
+   }
+
+   .name {
+      margin-right: 10px;
+   }
+
+   .subject {
+      width: 100%;
+   }
+
+   .textarea {
+      width: 100%;
+   }
+
+}
+
+.formHolder:last-child {
+   display: flex;
+   justify-content: flex-end;
+}
+
+@media (max-width: 850px) {
+   .contactForm {
+      flex-direction: column-reverse;
+      align-items: center;
+   }
+
+   .contactSection.right {
+      margin-bottom: 25px;
+
+      h4 {
+         display: none;
+      }
+   }
+
+   .contactHeader {
+      margin-bottom: 25px;
+   }
+}

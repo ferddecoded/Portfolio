@@ -1,0 +1,168 @@
+html {
+    font-size: 62.5%; /* makes font 10px */
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 4.5rem;
+    letter-spacing: 10px;
+    line-height: 3.5rem;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: lightgrey;
+    font-family: "Merriweather";
+    font-style: italic;
+    text-transform: uppercase;
+}
+h4 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-family: "merriweather";
+    text-transform: uppercase;
+}
+
+h5 {
+   margin: 20px 0;
+   padding: 0px;
+   color: black;
+   font-size: 1.2rem;
+   line-height: 1rem;
+   font-weight: 300;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+}
+nav {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    margin-right: 25px;
+}
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    margin-bottom: 20px;
+}
+
+img {
+   width: 100%;
+}
+
+.btn,
+.projectLinks a {
+   color: white;
+   background: black;
+   padding: 10px 25px;
+   font-size: 1.4rem;
+   text-transform: uppercase;
+   border: none;
+}
+
+.content {
+   @extend .flex;
+   position: relative;
+
+}
+
+.contentHeader { 
+   position: absolute;
+   transform: rotate(-90deg);
+   height: 20px;
+   text-align: right;
+   top: 190px;
+   left: -140px;
+   h2, h3 {
+      width: 400px;
+   }
+}
+
+.about .contentHeader {
+   left: -170px;
+}
+
+.contentDescription {
+   margin-top: 10%;
+
+   div {
+   padding: 0px 25px 25px 5px;
+    box-shadow: 3px 3px 3px grey;
+   }
+}
+
+.about .contentDescription {
+   margin-left: 20%;
+}
+
+.project .contentDescription {
+   margin-left: 10%;
+
+   .projectSkills {
+      margin-bottom: 20px;
+   }
+
+   .projectLinks a {
+      color: white;
+      background: black;
+      padding: 5px 25px;
+   }
+}
+
+.logo {
+   width: 100px;
+}
+
+
+.socialList,
+.social {
+   @extend .flex;
+   justify-content: center;
+   margin: 20px;
+
+   i {
+      font-size: 3rem;
+      color: lightgray;
+      transition: .3s all ease;
+   }
+
+   i:hover {
+         color: black;
+         transform: scale(1.2)
+   }
+}
+
+.hidden {
+   display: none;
+}
+

@@ -1,0 +1,36 @@
+.about {
+   @extend .flex;
+   margin-bottom: 100px;
+
+   .aboutHalf {
+      width: 50%;
+      position: relative;
+   }
+}
+
+@media (max-width: 1050px) {
+   .contentHeader {
+      left: -170px;
+   }
+}
+
+@media (max-width: 940px) {
+   p {
+      font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 860px) {
+   section.about {
+      flex-direction: column;
+      align-items: center;
+
+      .aboutHalf {
+         width: 90%;
+
+         .aboutHalfImage {
+            margin-bottom: 25px;
+         }
+      }
+   }
+}

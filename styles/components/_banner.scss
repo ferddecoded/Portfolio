@@ -1,0 +1,91 @@
+
+.banner .wrapper {
+   position: relative;
+}
+
+.banner {
+   margin-bottom: 100px;
+   color: white;
+
+   h4 {
+      font-family: "montserrat";
+      font-weight: 700;
+   }
+
+   .bannerTitle {
+      position: absolute;
+      top: 35%;
+      z-index: 1;
+      background: lightgray;
+      padding-top: 40px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+   }
+
+   .bannerContainer .wrapper {
+      @extend .flex;
+      justify-content: flex-end;
+   }
+}
+
+.bannerContainer {
+   background: url(./../../assets/hello.jpg) fixed center no-repeat;
+   background-size: cover; 
+   background-attachment: fixed;
+}
+
+.bannerContainerLeft {
+   height: 450px;
+   width: 350px;
+   border: 5px solid white;
+   padding: 20px;
+   @extend .flex;
+   align-items: flex-end;
+   position: absolute;
+   left: 25%;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.bannerContainerRight {
+   position: absolute;
+}
+
+@media (max-width: 940px) {
+   .banner .bannerTitle {
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      h2 {
+         font-size: 1.6rem;
+      }
+
+      h1 {
+         font-size: 3.5rem;
+      }
+   }
+
+   .bannerContainerLeft {
+      width: 300px;
+      top: 60%;
+   }
+}
+
+@media (max-width: 650px) {
+   .banner .bannerTitle {
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+
+      h2 {
+         font-size: 1.2rem;
+      }
+
+      h1 {
+         font-size: 2.8rem;
+      }
+   }
+}
+
+
+

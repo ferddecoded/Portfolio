@@ -1,0 +1,131 @@
+.skills {
+   margin-bottom: 50px;
+   padding: 25px 25px 0px 25px;
+   display: flex;
+   justify-content: center;
+   background: lightgray;
+   box-shadow: 3px 3px 3px grey;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+   .skillsHolder {
+      width: calc(25% - (25px * 3) / 4);
+      margin-right: 25px;
+      margin-bottom: 25px;
+   }
+
+   .skillsHolder:nth-child(4n) {
+      margin-right: 0;
+   }
+}
+
+.skillsholderImg {
+   width: 100px;
+   margin: 30px auto;
+   .skillsImg {
+      filter: grayscale(100%);
+      transition: .3s all;
+
+   }
+}
+
+.skillsImg:hover {
+   filter: grayscale(0);
+}
+
+.skillsHolder {
+   background: white;
+}
+
+.projectSection {
+   padding-bottom: 50px;
+}
+
+.heading {
+   margin-bottom: 25px;
+}
+
+.project {
+   display: flex;
+   margin-bottom: 100px;
+
+
+    .projectContainer {
+       width: 50%;
+       height:350px;
+       padding: 0 5%;
+    }
+
+    .projectConImg {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+}
+
+
+.project:nth-of-type(2n) {
+   flex-direction: row-reverse;
+}
+
+.projectSkills {
+   display: flex;
+   flex-wrap: wrap;
+   li {
+      padding: 10px 15px;
+      border: 2px solid grey;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+   }
+}
+
+@media (max-width: 1250px) {
+   .project .projectCOnImg img {
+      width: 110%;
+   }
+}
+
+@media (max-width:1200px) {
+   .projectContainer {
+      width: 60%;
+   }
+}
+
+@media (max-width: 940px) {
+   .project,
+   .project:nth-of-type(2n) {
+      flex-direction: column;
+      align-items: center;
+
+      .projectContainer {
+      width: 70%;
+      margin-bottom: 5%;
+      }
+   }
+
+   .project {
+      margin-bottom: 0;
+   }
+
+   .project .projectCOnImg img {
+      width: 100%;
+   }
+}
+
+@media (max-width: 850px) {
+   .skillsContainer {
+      width: 100%;
+   }
+   .projectSection .wrapperTwo .projectContainer.projectConImg {
+      margin-bottom: 0;
+   }
+}
+
+@media (max-width: 650px) {
+   .projectSkills li {
+      font-size: 1rem;
+   }
+}

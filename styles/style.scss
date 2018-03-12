@@ -1,0 +1,30 @@
+@import "./components/base";
+@import "./components/header";
+@import "./components/banner";
+@import "./components/about";
+@import "./components/skillsProjects";
+@import "./components/contact";
+@import "./components/footer";
+
+.flex {
+   display: flex;
+}
+
+.wrapper {
+   max-width: 940px;
+   width: 80%;
+   margin: 0 auto;
+}
+
+.wrapperOuter {
+   max-width: 1200px;
+   width: 95%;
+}
+
+body {
+   max-width: 1400;
+   margin: 0 auto;
+   font-family: 'Montserrat', sans-serif;
+}
+
+
