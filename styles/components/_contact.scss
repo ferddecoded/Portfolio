@@ -1,5 +1,4 @@
 .contact {
-   // background:lightgray;
    padding:0 0 50px;
 
    h4 {
@@ -109,5 +108,16 @@
 
    .contactHeader {
       margin-bottom: 25px;
+   }
+
+   .contact .wrapper .contactForm .contactSection.left {
+      width: 100%;
+      text-align: center;
+   }
+}
+
+@media (max-width: 450px) {
+   main .contact .wrapper {
+      padding: 20px 0;
    }
 }

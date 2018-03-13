@@ -5,21 +5,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="styles/style.css">
+   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
    <link href="https://use.fontawesome.com/863f28bd20.css" media="all" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,700i|Montserrat:400,700" rel="stylesheet">
-   <title>Document</title>
+   <title>FerdDecoded</title>
 </head>
 <body>
    <header>
          <div class="logo">
-            <img src="./assets/logo.png" alt="">
+            <a href="#home">
+               <img src="./assets/logo.png" alt="">
+            </a>
          </div>
 
-         <ul class="navigation">
-            <li>
-               <a data-scroll href="#home">Home</a>
-            </li>
+         <ul class="navigation" id="top-menu">
             <li>
                <a data-scroll href="#about">About</a>
             </li>
@@ -43,8 +43,8 @@
       </div>
       <div class="bannerContainerLeft">
          <div class="bannerContainerHolder">
-            <h4>OFFER A VARIETY OF CREATIVE SERVICES TO SUIT EVERY NEED</h4>
-            <a data-scroll class="btn fill" href="#about">
+            
+            <a data-scroll class="btn btnAbout" href="#about">
                Check Me Out
             </a>
          </div>
@@ -53,13 +53,13 @@
 
    <main>
       <div class="wrapper">
-         <section class="about">
-            <div class="aboutHalf">
+         <section class="about" id="about">
+            <div class="aboutHalf" data-aos="fade-right" data-aos-duration="300">
               <div class="aboutHalfImage"> 
-                 <img src="./assets/2018-Winter-Bootcamp-Ferdinand-Ismael-3.jpg" alt="" id="about">
+                 <img src="./assets/2018-Winter-Bootcamp-Ferdinand-Ismael-3.jpg" alt="">
                </div>
             </div>
-            <div class="aboutHalf content">
+            <div class="aboutHalf content" data-aos="fade-right" data-aos-offset="300">
 
                <div class="contentHeader">
                   <h2>About Me</h2>
@@ -71,7 +71,7 @@
                      <p>Hi there! My name is Ferdinand Ismael and I am a front end developer based in the Toronto/Mississauga area.</p>
                      <p> I enjoy tackling and solving complex problems and being able to apply my technical knowledge to the intricacies of the web. My curiosity lies in finding out how things work and how I can replicate and explore new ideas. </p>
                      <p>Feel free to contact me for any inquiries or questions you may have,</p>
-                     <p><a href="#contact">Let's Connect!</a></p>
+                     <p><a href="#contact" class="btn">Let's Connect!</a></p>
                      <section class="socials">
                         <ul class="socialList">
                            <li><a href="https://twitter.com/ferddecoded"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
@@ -85,57 +85,78 @@
          </section>
       </div>
 
-      <div class="wrapper">
+      <div class="wrapper" id="skills">
          <h2 class="heading">Skills</h2>
       </div>
-      <section class="skills" id="skills">
+      <section class="skills">
          <div class="skillsContainer">
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/javascript.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/javascript.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/css3.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/css3.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/github.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/github.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/githubKitty.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/githubKitty.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/gulp.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/gulp.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg">
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
                   <img class="skillsImg" src="./assets/html5.svg" alt="">
                </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/jquery.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/jquery.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg"class="skillsImg" src="./assets/nodejs.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg"class="skillsImg" src="./assets/nodejs.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/react.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/react.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/sass.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/sass.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/vscode.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/vscode.svg" alt="">
+               </div>
             </div>
             <div class="skillsHolder">
-               <div class="skillsholderImg"><img class="skillsImg" src="./assets/firebase.svg" alt=""></div>
+               <div class="skillsholderImg" data-aos="zoom-in" data-aos-duration="300">
+                  <img class="skillsImg" src="./assets/firebase.svg" alt="">
+               </div>
             </div>
          </div>
       </section>
 
-      <!-- <div class="wrapper"> -->
-         <div class="wrapper"><h2 class="heading">Projects</h2></div>
-         <section class="projectSection" id="project">
-            <div class="wrapperTwo">
-               <div class="project">
+      <section class="projectSection" id="project">
+         <div class="wrapperTwo">
+               <div class="wrapper"><h2 class="heading">Projects</h2></div>
+               <div class="project" data-aos-offset="300" data-aos="fade-down">
                   <div class="projectContainer projectConImg">
                      <img src="./assets/coffeeWalks.png" alt="">
                   </div>
@@ -154,14 +175,14 @@
                               <li>Gulp</li>
                            </ul>
                            <section class="projectLinks">
-                              <a href="">View Live</a>
-                              <a href="">GitHub</a>
+                              <a href="https://coffee-walks.firebaseapp.com/" target="_blank">View Live</a>
+                              <a href="https://github.com/ferddecoded/coffee-walks" target="_blank">GitHub</a>
                            </section>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="project">
+               <div class="project" data-aos-offset="300" data-aos="fade-down">
                   <div class="projectContainer projectConImg">
                      <img src="./assets/searchShop.png" alt="">
                   </div>
@@ -180,14 +201,14 @@
                               <li>Gulp</li>
                            </ul>
                            <section class="projectLinks">
-                              <a href="">View Live</a>
-                              <a href="">GitHub</a>
+                              <a href="https://ferddecoded.github.io/Search-Shop-Dine/" target="_blank">View Live</a>
+                              <a href="https://github.com/ferddecoded/Search-Shop-Dine" target="_blank">GitHub</a>
                            </section>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="project">
+               <div class="project" data-aos-offset="300" data-aos="fade-down">
                   <div class="projectContainer projectConImg">
                      <img src="./assets/didYouHear.png" alt="">
                   </div>
@@ -205,16 +226,16 @@
                               <li>Spotify API</li>
                            </ul>
                            <section class="projectLinks">
-                              <a href="https://ronsonismael.github.io/music_event_app/">View Live</a>
-                              <a href="">GitHub</a>
+                              <a href="https://ronsonismael.github.io/music_event_app/" target="_blank">View Live</a>
+                              <a href="https://github.com/ferddecoded/DidYouHear" target="_blank">GitHub</a>
                            </section>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="project">
+               <div class="project" data-aos-offset="300" data-aos="fade-down">
                   <div class="projectContainer projectConImg">
-                     <img src="./assets/ramenator.png" alt="">
+                     <img src="./assets/ramentator.png" alt="">
                   </div>
                   <div class="projectContainer projectConInfo content">
                      <div class="contentHeader">
@@ -231,14 +252,14 @@
                               <li>Sass</li>
                            </ul>
                            <section class="projectLinks">
-                              <a href="">View Live</a>
-                              <a href="">GitHub</a>
+                              <a href="https://ferddecoded.github.io/ReccoRamendations/" target="_blank">View Live</a>
+                              <a href="https://github.com/ferddecoded/ReccoRamendations" target="_blank">GitHub</a>
                            </section>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="project">
+               <div class="project" data-aos-offset="300" data-aos="fade-down">
                   <div class="projectContainer projectConImg">
                      <img src="./assets/advisory.png" alt="">
                   </div>
@@ -258,8 +279,8 @@
                               <li>CSS3</li>
                            </ul>
                            <section class="projectLinks">
-                              <a href="">View Live</a>
-                              <a href="">GitHub</a>
+                              <a href=" https://ferddecoded.github.io/AdvisoryDesign/" target="_blank">View Live</a>
+                              <a href="https://github.com/ferddecoded/AdvisoryDesign" target="_blank" id="contact">GitHub</a>
                            </section>
                         </div>
                      </div>
@@ -267,9 +288,8 @@
                </div>
             </div>
          </section>
-      <!-- </div> -->
 
-      <section class="contact" id="contact">
+      <section class="contact">
          <div class="wrapper">
             <div class="contactHeader">
                <div class="contactHeaderHolder">
@@ -284,7 +304,8 @@
                      <img src="./assets/logo.png" alt="">
                   </div>
                   <h5>416 985 9498</h5>
-                  <h5>ferdinand.ismael@gmail.com</h5>
+                  <h5>contact@ferddecoded.ca</h5>
+                  <h5>Toronto, Ontario</h5>
                   <section class="socials">
                      <ul class="socialList">
                         <li>
@@ -337,6 +358,8 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
    <script src="./scripts/smooth-scroll.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
    <script src="./scripts/scripts.js"></script>
 
 </body>

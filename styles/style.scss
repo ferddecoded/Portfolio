@@ -16,15 +16,22 @@
    margin: 0 auto;
 }
 
-.wrapperOuter {
-   max-width: 1200px;
-   width: 95%;
-}
+// .wrapperOuter {
+//    max-width: 1200px;
+//    width: 95%;
+// }
 
 body {
    max-width: 1400;
    margin: 0 auto;
    font-family: 'Montserrat', sans-serif;
 }
+
+@media (max-width:450px) {
+   .wrapper {
+      width: 95%;
+   }
+}
+
 
 

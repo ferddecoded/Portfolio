@@ -76,13 +76,17 @@ img {
   width: 100%; }
 
 .btn,
-.projectLinks a {
+.project .contentDescription .projectLinks a {
   color: white;
   background: black;
   padding: 10px 25px;
   font-size: 1.4rem;
   text-transform: uppercase;
-  border: none; }
+  border: none;
+  transition: .4s all ease; }
+  .btn:hover,
+  .project .contentDescription .projectLinks a:hover {
+    background: lightgray; }
 
 .content {
   position: relative; }
@@ -97,6 +101,9 @@ img {
   left: -140px; }
   .contentHeader h2, .contentHeader h3 {
     width: 400px; }
+
+.contentHeaderMobile {
+  display: none; }
 
 .about .contentHeader {
   left: -170px; }
@@ -140,6 +147,10 @@ img {
 .hidden {
   display: none; }
 
+@media (max-width: 450px) {
+  .project .contentHeader {
+    left: -185px; } }
+
 header {
   position: fixed;
   width: 100%;
@@ -159,13 +170,26 @@ ul.navigation a {
   transition: .6s all ease; }
 
 ul.navigation a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+  -webkit-text-decoration-color: #216869;
+          text-decoration-color: #216869; }
 
 ul.navigation a.active {
   color: grey; }
 
+#top-menu li.active a {
+  border-top: 3px solid #333;
+  color: #333; }
+
 .banner .wrapper {
   position: relative; }
+
+.btnAbout {
+  background: white;
+  color: black;
+  transition: .4s all ease; }
+  .btnAbout:hover {
+    background: lightgrey; }
 
 .banner {
   margin-bottom: 100px;
@@ -178,9 +202,7 @@ ul.navigation a.active {
     top: 35%;
     z-index: 1;
     background: lightgray;
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px; }
+    padding: 40px; }
   .banner .bannerContainer .wrapper {
     justify-content: flex-end; }
 
@@ -190,8 +212,8 @@ ul.navigation a.active {
   background-attachment: fixed; }
 
 .bannerContainerLeft {
-  height: 450px;
-  width: 350px;
+  height: 60%;
+  width: 40%;
   border: 5px solid white;
   padding: 20px;
   align-items: flex-end;
@@ -206,26 +228,38 @@ ul.navigation a.active {
 
 @media (max-width: 940px) {
   .banner .bannerTitle {
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px; }
+    padding: 30px; }
     .banner .bannerTitle h2 {
       font-size: 1.6rem; }
     .banner .bannerTitle h1 {
       font-size: 3.5rem; }
   .bannerContainerLeft {
-    width: 300px;
     top: 60%; } }
 
 @media (max-width: 650px) {
   .banner .bannerTitle {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px; }
+    padding: 20px; }
     .banner .bannerTitle h2 {
       font-size: 1.2rem; }
     .banner .bannerTitle h1 {
       font-size: 2.8rem; } }
+
+@media (max-width: 450px) {
+  .bannerContainerLeft {
+    left: 15%;
+    width: 70%; }
+  .banner .bannerTitle {
+    padding: 10px; }
+  .banner .bannerTitle h1 {
+    font-size: 2rem; }
+  .banner .bannerTitle h2 {
+    font-size: 1rem; } }
+
+@media (max-width: 400px) {
+  .banner .bannerTitle h1 {
+    font-size: 1.4rem; }
+  .banner .bannerTitle h2 {
+    font-size: .8rem; } }
 
 .about {
   margin-bottom: 100px; }
@@ -248,7 +282,9 @@ ul.navigation a.active {
     section.about .aboutHalf {
       width: 90%; }
       section.about .aboutHalf .aboutHalfImage {
-        margin-bottom: 25px; } }
+        margin-bottom: 25px; }
+  .about .contentHeader {
+    left: -200px; } }
 
 .skills {
   margin-bottom: 50px;
@@ -270,7 +306,8 @@ ul.navigation a.active {
     margin-right: 0; }
 
 .skillsholderImg {
-  width: 100px;
+  max-width: 100px;
+  padding: 0 10px;
   margin: 30px auto; }
   .skillsholderImg .skillsImg {
     -webkit-filter: grayscale(100%);
@@ -285,7 +322,7 @@ ul.navigation a.active {
   background: white; }
 
 .projectSection {
-  padding-bottom: 50px; }
+  padding: 50px 0; }
 
 .heading {
   margin-bottom: 25px; }
@@ -310,9 +347,10 @@ ul.navigation a.active {
   flex-wrap: wrap; }
   .projectSkills li {
     padding: 10px 15px;
-    border: 2px solid grey;
     margin-bottom: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-right: 0;
+    font-weight: 700; }
 
 @media (max-width: 1250px) {
   .project .projectCOnImg img {
@@ -333,7 +371,7 @@ ul.navigation a.active {
       margin-bottom: 5%; }
   .project {
     margin-bottom: 0; }
-  .project .projectCOnImg img {
+  .project .projectConImg img {
     width: 100%; } }
 
 @media (max-width: 850px) {
@@ -345,6 +383,23 @@ ul.navigation a.active {
 @media (max-width: 650px) {
   .projectSkills li {
     font-size: 1rem; } }
+
+@media (max-width: 500px) {
+  .project .projectContainer, .project:nth-of-type(2n) .projectContainer {
+    width: 90%; }
+  .project {
+    margin-bottom: 50px; } }
+
+@media (max-width: 330px) {
+  .project .contentDescription .projectLinks a {
+    font-size: 1rem;
+    padding: 10px; }
+  .skills {
+    padding: 20px 10px 0px 10px; }
+  .skillsholderImg {
+    max-width: 100px;
+    padding: 0 10px;
+    margin: 10px auto; } }
 
 .contact {
   padding: 0 0 50px; }
@@ -412,7 +467,14 @@ ul.navigation a.active {
     .contactSection.right h4 {
       display: none; }
   .contactHeader {
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+  .contact .wrapper .contactForm .contactSection.left {
+    width: 100%;
+    text-align: center; } }
+
+@media (max-width: 450px) {
+  main .contact .wrapper {
+    padding: 20px 0; } }
 
 footer {
   justify-content: center;
@@ -427,11 +489,11 @@ footer {
   width: 80%;
   margin: 0 auto; }
 
-.wrapperOuter {
-  max-width: 1200px;
-  width: 95%; }
-
 body {
   max-width: 1400;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif; }
+
+@media (max-width: 450px) {
+  .wrapper {
+    width: 95%; } }

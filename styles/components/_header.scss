@@ -22,26 +22,20 @@ ul.navigation {
       text-decoration: none;
       transition: .6s all ease;
    }
-   // a::after {
-   //    content: "";
-   //    -webkit-transform: scaleX(0);
-   //    transform: scaleX(0);
-   //    width: 100%;
-   //    border-bottom: 2px solid #111;
-   //    position: absolute;
-   //    bottom: 5px;
-   //    left: 0;
-   //    -webkit-transition: all 0.3s ease;
-   //    transition: all 0.3s ease;
-   // }
 
    a:hover {
       text-decoration: underline;
+      text-decoration-color: #216869;
    }
    a.active {
       color: grey;
    }
 
+}
+
+#top-menu li.active a {
+    border-top: 3px solid #333;
+    color: #333;
 }
 
 

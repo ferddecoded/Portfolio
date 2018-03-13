@@ -52,27 +52,85 @@ portfolio.buildMatrix = function() {
       drops[i]++;
     }
   };
-  setInterval(portfolio.draw, 33);
+  portfolio.matrixInterval = setInterval(portfolio.draw, 33);
 };
 // MATRIX BACKGROUND ENDS
+
+portfolio.TopMenuScroll = function() {
+   var lastId,
+     topMenu = $("#top-menu"),
+     topMenuHeight = topMenu.outerHeight() + 15,
+     // All list items
+     menuItems = topMenu.find("a"),
+     // Anchors corresponding to menu items
+     scrollItems = menuItems.map(function() {
+       var item = $($(this).attr("href"));
+       if (item.length) {
+         return item;
+       }
+     });
+
+   // Bind click handler to menu items
+   // so we can get a fancy scroll animation
+   menuItems.click(function(e) {
+     var href = $(this).attr("href"),
+       offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+     $("html, body")
+       .stop()
+       .animate({ scrollTop: offsetTop }, 300);
+     e.preventDefault();
+   });
+
+   // Bind to scroll
+   $(window).scroll(function() {
+     // Get container scroll position
+     var fromTop = $(this).scrollTop() + topMenuHeight;
+
+     // Get id of current scroll item
+     var cur = scrollItems.map(function() {
+       if ($(this).offset().top < fromTop) return this;
+     });
+     // Get the id of the current element
+     cur = cur[cur.length - 1];
+     var id = cur && cur.length ? cur[0].id : "";
+
+     if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent()
+         .removeClass("active")
+         .end()
+         .filter("[href='#" + id + "']")
+         .parent()
+         .addClass("active");
+     }
+   });
+}
 
 
 portfolio.init = function() {
   portfolio.buildMatrix();
+  AOS.init();
+  portfolio.TopMenuScroll();
 //   portflio.smoothScroll();
 };
 
 $(function() {
-  portfolio.init();
-   var s = $("#sticker");
-   var pos = s.position();
-   $(window).scroll(function () {
-         var windowpos = $(window).scrollTop();
-         if (windowpos > pos.top) {
-            s.addClass("stick");
-         } else {
-            s.removeClass("stick");
-         }
-   });
+   portfolio.init();
+   // the screen has not been resized initially, aso set that state to false
+   let recentlyResized = false;
+   $(window).on('resize', function() {
+      // on first resize, initialize the redrawing of the canvas, then set recently resized to true
+      if (!recentlyResized) {
+         clearInterval(portfolio.matrixInterval);
+         portfolio.buildMatrix();
+         recentlyResized = true;
+         // Is essentially a flag to not redraw the canvas again if within 50 milliseconds
+         setTimeout(function () {
+               recentlyResized = false;
+         }, 50);
+      }
+   })
 });
 
